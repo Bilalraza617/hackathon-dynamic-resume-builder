@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Resume Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Dynamic Resume Generator</h1>
+
+    <form id="resumeForm">
+      <h2>Personal Information</h2>
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter your name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+
+      <label for="phone">Phone:</label>
+      <input
+        type="tel"
+        id="phone"
+        placeholder="Enter your phone number"
+        required
+      />
+
+      <h2>Education</h2>
+      <label for="education"
+        >Education (separate multiple entries with commas):</label
+      >
+      <textarea id="education" rows="3" placeholder="" required></textarea>
+
+      <h2>Work Experience</h2>
+      <label for="experience"
+        >Work Experience (separate multiple entries with commas):</label
+      >
+      <textarea id="experience" rows="3" placeholder="" required></textarea>
+
+      <h2>Skills</h2>
+      <label for="skills"
+        >Skills (separate multiple entries with commas):</label
+      >
+      <textarea id="skills" rows="3" placeholder="" required></textarea>
+
+      <button type="submit">Generate Resume</button>
+    </form>
+
+    <div id="resume" class="resume hidden">
+      <h2>Generated Resume</h2>
+      <section id="personal-info"></section>
+      <section id="education-info"></section>
+      <section id="work-experience-info"></section>
+      <section id="skills-info"></section>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
